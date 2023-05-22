@@ -30,3 +30,4 @@ item4 = Item("Mouse", 50, 5)
 item5 = Item("Keyboard", 75, 5)
 
 print(Item.all)  # this will call the __repr__() method one by one all instances
+#please note here the class atrribute is also gets automatically assigned as instance attribute however its not printed but we can always use the same with item1. pay_rate
