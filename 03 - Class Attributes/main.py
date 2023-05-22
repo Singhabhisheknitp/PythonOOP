@@ -25,6 +25,9 @@ class Item:
 
 item1 = Item("Phone", 100, 1)
 item2 = Item("Laptop", 1000, 3)
+# we can always assign some additional attribute outside than constructor 
+#for example item2.has_numpad= False
+# we can also chnage the instance initialised variable done by constructor initially 
 item3 = Item("Cable", 10, 5)
 item4 = Item("Mouse", 50, 5)
 item5 = Item("Keyboard", 75, 5)
