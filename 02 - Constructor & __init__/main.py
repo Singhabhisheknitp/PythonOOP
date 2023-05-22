@@ -9,10 +9,10 @@ class Item:
         self.price = price
         self.quantity = quantity
 
-    def calculate_total_price(self):
+    def calculate_total_price(self): # when this method is called instance are already created hence we use instance variable inside the function
         return self.price * self.quantity
 
-item1 = Item("Phone", 100, 1)
+item1 = Item("Phone", 100, 1)   #the moment we create object of the class it automatically sent to method init() as one arg
 item2 = Item("Laptop", 1000, 3)
 
 print(item1.calculate_total_price())
