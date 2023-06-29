@@ -1,5 +1,5 @@
 class Item:
-    pay_rate = 0.8 # The pay rate after 20% discount its a gloabl attribute that means the value will be common across all the instances
+    pay_rate = 0.8 # The pay rate after 20% discount its a gloabl attribute that means the value will be common across all the instances, unlike object related attributes which are different for different objects and cretaed while we create the instances of the object
     all = []
     def __init__(self, name: str, price: float, quantity=0):
         # Run validations to the received arguments
@@ -12,7 +12,7 @@ class Item:
         self.quantity = quantity
 
         # Actions to execute
-        Item.all.append(self)
+        Item.all.append(self)  # this again is a global attribute of the class that you can access through calling on class directly & not the onject. it is just creating list of the objects  
 
     def calculate_total_price(self):
         return self.price * self.quantity
@@ -20,7 +20,7 @@ class Item:
     def apply_discount(self):
         self.price = self.price * self.pay_rate
 
-    def __repr__(self):
+    def __repr__(self): # what output you want while printing the objects of the class. default would be something like <class '__main__.Item'>
         return f"Item('{self.name}', {self.price}, {self.quantity})"
 
 item1 = Item("Phone", 100, 1)
@@ -32,5 +32,5 @@ item3 = Item("Cable", 10, 5)
 item4 = Item("Mouse", 50, 5)
 item5 = Item("Keyboard", 75, 5)
 
-print(Item.all)  # this will call the __repr__() method one by one all instances
+print(Item.all)  # this will call the __repr__() method one by one for all instances
 #please note here the class atrribute is also gets automatically assigned as instance attribute however its not printed but we can always use the same with item1. pay_rate
