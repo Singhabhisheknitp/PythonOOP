@@ -6,7 +6,7 @@ class Item:
 # How to create an instance of a class
 item1 = Item()
 
-# Assign attributes:
+# Assign attributes: #you could always assign an attribute outside the class specific to instances or you could also define them in constructor (advisable)
 item1.name = "Phone"
 item1.price = 100
 item1.quantity = 5
